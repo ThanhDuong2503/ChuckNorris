@@ -13,7 +13,7 @@ const useStyles = makeStyles({
     },
 });
 
-export default function ChuckCard() {
+export default function ChuckCard(props) {
 
     const classes = useStyles();
 
@@ -28,11 +28,13 @@ export default function ChuckCard() {
                 />
                 <CardContent>
                     <Typography gutterBottom variant="h5" component="h2">
-                        Lizard
+                        Joke Content
+                    </Typography>
+                    <Typography variant="body2" color="textPrimary" component="h5">
+                        {props.jokeProps.categories}
                     </Typography>
                     <Typography variant="body2" color="textSecondary" component="p">
-                        Lizards are a widespread group of squamate reptiles, with over 6,000 species, ranging
-                        across all continents except Antarctica
+                        {props.jokeProps.value}
                     </Typography>
                 </CardContent>
             </CardActionArea>

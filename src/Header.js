@@ -8,6 +8,7 @@ import IconButton from '@material-ui/core/IconButton';
 import Menu from '@material-ui/core/Menu';
 import MenuItem from '@material-ui/core/MenuItem';
 import {useHistory} from "react-router";
+import {Link} from "react-router-dom";
 
 const useStyles = makeStyles((theme) => ({
     root: {
@@ -67,9 +68,15 @@ export default function Header() {
                                 open={Boolean(anchorEl)}
                                 onClose={handleClose}
                             >
-                                <MenuItem onClick={handleClose}>Home</MenuItem>
-                                <MenuItem onClick={handleClose}>Random Joke</MenuItem>
-                                <MenuItem onClick={handleClose}>Categories</MenuItem>
+                                <MenuItem onClick={handleClose}>
+                                    <Link to="/">Home</Link>
+                                </MenuItem>
+                                <MenuItem onClick={handleClose}>
+                                    <Link to="/random">Random Joke</Link>
+                                </MenuItem>
+                                <MenuItem onClick={handleClose}>
+                                    <Link to="/categories">Categories</Link>
+                                </MenuItem>
                             </Menu>
                     </IconButton>
 
