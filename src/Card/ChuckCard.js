@@ -24,7 +24,6 @@ export default function ChuckCard(props) {
                     className={classes.media}
                     image="https://aisvip-a.akamaihd.net/themenarchiv/chuck-norris-bilder/3-1e1eaqaq/460x0/2325/chuck-norris-t2914.jpg"
                     title="ChuckNorris"
-                    width="30%"
                 />
                 <CardContent>
                     <Typography gutterBottom variant="h5" component="h2">
@@ -33,7 +32,7 @@ export default function ChuckCard(props) {
                     <Typography variant="body2" color="textPrimary" component="h3">
                         {props.jokeProps.categories}
                     </Typography>
-                    <Typography variant="body2" color="textSecondary" component="p">
+                    <Typography variant="body2" color="Primary" component="p">
                         {props.jokeProps.value}
                     </Typography>
                 </CardContent>
