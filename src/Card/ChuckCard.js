@@ -26,13 +26,10 @@ export default function ChuckCard(props) {
                     title="ChuckNorris"
                 />
                 <CardContent>
-                    <Typography gutterBottom variant="h5" component="h2">
-                        Joke Content
-                    </Typography>
-                    <Typography variant="body2" color="textPrimary" component="h3">
+                    <Typography gutterBottom variant="h5" color="inherit" component="h3">
                         {props.jokeProps.categories}
                     </Typography>
-                    <Typography variant="body2" color="Primary" component="p">
+                    <Typography variant="body1" color="secondary" component="p">
                         {props.jokeProps.value}
                     </Typography>
                 </CardContent>

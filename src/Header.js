@@ -31,6 +31,8 @@ const useStyles = makeStyles((theme) => ({
     },
 }));
 
+
+
 export default function Header() {
 
     const classes = useStyles();
@@ -58,7 +60,7 @@ export default function Header() {
             <AppBar color="primary" position="static">
                 <Toolbar>
                     <IconButton edge="start" className={classes.menuButton} color="inherit" aria-label="menu">
-                        <Button color="inherit" aria-controls="simple-menu" aria-haspopup="true" onClick={handleClick}>
+                        <Button color="secondary" aria-controls="simple-menu" aria-haspopup="true" onClick={handleClick}>
                             Menu
                         </Button>
                             <Menu
@@ -87,8 +89,6 @@ export default function Header() {
                     </Typography>
 
                     <Button className={classes.button} variant="contained" color="secondary" onClick={goForwardHandle}> go forward </Button>
-
-                    <Button className={classes.switchButton} color="inherit">Switch Mode</Button>
 
                 </Toolbar>
             </AppBar>

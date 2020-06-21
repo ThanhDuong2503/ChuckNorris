@@ -7,7 +7,7 @@ import { makeStyles } from '@material-ui/core/styles';
 
 const useStyles = makeStyles({
         root: {
-                background: 'linear-gradient(45deg, #1e88e5 40%, #e91e63 90%)',
+                background: 'linear-gradient(45deg, #1e88e5 30%, #e91e63 80%)',
                 color: props => props.color,
         },
 });
@@ -18,7 +18,6 @@ export default function Main(props) {
 
 return(
     <div className={classes.root}>
-        <h2>MainContent</h2>
             <Switch>
                     <Route path="/" exact>
                             <h2>Welcome to Chuck Norris's best jokes</h2>
