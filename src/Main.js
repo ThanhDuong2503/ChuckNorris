@@ -1,7 +1,11 @@
 import React from "react";
+import ChuckCard from "./Card/ChuckCard";
 
 export default function Main() {
 return(
-    <h2>Main Content</h2>
+    <>
+        <h1>MainContent</h1>
+        <ChuckCard></ChuckCard>
+        </>
 );
 }

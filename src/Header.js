@@ -1,5 +1,4 @@
 import React from "react";
-import "./Header.css";
 import { makeStyles } from '@material-ui/core/styles';
 import AppBar from '@material-ui/core/AppBar';
 import Toolbar from '@material-ui/core/Toolbar';
@@ -12,16 +11,22 @@ import {useHistory} from "react-router";
 
 const useStyles = makeStyles((theme) => ({
     root: {
-        flexGrow: 1,
+        flexGrow: 0,
     },
     menuButton: {
-        marginRight: theme.spacing(20),
+        marginRight: theme.spacing(10),
     },
     title: {
         flexGrow: 1,
+
     },
     switchButton: {
-        marginLeft: theme.spacing(20),
+        marginLeft: theme.spacing(10),
+    },
+    button: {
+        '& > *': {
+            margin: theme.spacing(1),
+        },
     },
 }));
 
@@ -49,7 +54,7 @@ export default function Header() {
 
     return(
         <div className={classes.root}>
-            <AppBar className={"Header"} position="static">
+            <AppBar color="primary" position="static">
                 <Toolbar>
                     <IconButton edge="start" className={classes.menuButton} color="inherit" aria-label="menu">
                         <Button color="inherit" aria-controls="simple-menu" aria-haspopup="true" onClick={handleClick}>
@@ -68,13 +73,13 @@ export default function Header() {
                             </Menu>
                     </IconButton>
 
-                    <button onClick={goBackHandle}> go back </button>
+                    <Button className={classes.button} variant="contained" color="secondary" onClick={goBackHandle}> go back </Button>
 
-                    <Typography variant="h3" className={classes.title}>
+                    <Typography variant="h2" className={classes.title}>
                         Chuck Norris Jokes
                     </Typography>
 
-                    <button onClick={goForwardHandle}> go forward </button>
+                    <Button className={classes.button} variant="contained" color="secondary" onClick={goForwardHandle}> go forward </Button>
 
                     <Button className={classes.switchButton} color="inherit">Switch Mode</Button>
 
