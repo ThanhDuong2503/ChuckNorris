@@ -4,18 +4,17 @@ import {useParams} from "react-router";
 
 export default function SelectedCategory({match}) {
 
-    const [category, setCategory] = useState();
+    const [category, setCategory] = useState([]);
 
     useEffect(() => {
-        fetch(`https://api.chucknorris.io/jokes/random?category=${match.category}`)
+        fetch(`https://api.chucknorris.io/jokes/random?category=${match.categories}`)
             .then (response => response.json())
             .then (data => setCategory(data))
-        console.log(match)
     },[] );
 
     return(
-        <>
-            {category && <ChuckCard jokeProps={match.category}></ChuckCard>  }
-        </>
+        <div>
+            {category && <ChuckCard jokeProps={category}></ChuckCard>  }
+        </div>
     )
 }

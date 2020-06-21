@@ -9,17 +9,17 @@ return(
     <>
         <h2>MainContent</h2>
             <Switch>
-                    <Route exact path="/">
+                    <Route path="/" exact>
                             <h2>Welcome to Chuck Norris's best jokes</h2>
                     </Route>
-                    <Route exact path="/random">
+                    <Route path="/random?category=:name">
+                            <SelectedCategory></SelectedCategory>
+                    </Route>
+                    <Route path="/random" exact>
                             <Random></Random>
                     </Route>
                     <Route path="/categories">
                             <Categories></Categories>
-                    </Route>
-                    <Route path="/random/:id">
-                            <SelectedCategory></SelectedCategory>
                     </Route>
             </Switch>
         </>

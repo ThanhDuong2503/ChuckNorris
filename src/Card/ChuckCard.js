@@ -30,7 +30,7 @@ export default function ChuckCard(props) {
                     <Typography gutterBottom variant="h5" component="h2">
                         Joke Content
                     </Typography>
-                    <Typography variant="body2" color="textPrimary" component="h5">
+                    <Typography variant="body2" color="textPrimary" component="h3">
                         {props.jokeProps.categories}
                     </Typography>
                     <Typography variant="body2" color="textSecondary" component="p">
