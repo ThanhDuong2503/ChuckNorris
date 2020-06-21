@@ -12,7 +12,7 @@ return(
                     <Route path="/" exact>
                             <h2>Welcome to Chuck Norris's best jokes</h2>
                     </Route>
-                    <Route path="/random?category=:name">
+                    <Route path="/category/:category">
                             <SelectedCategory></SelectedCategory>
                     </Route>
                     <Route path="/random" exact>
