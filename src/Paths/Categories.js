@@ -14,7 +14,9 @@ export default function Categories() {
 return(
     <div>
         {categories.map(category => (
-            <h2>{category}</h2>
+            <h2 key={category.id}>
+                <Link to={`/random?category=${category}`}>{category}</Link>
+            </h2>
         ))}
     </div>
 )
