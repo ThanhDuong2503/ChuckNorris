@@ -1,6 +1,5 @@
 .Main{
     display: flex;
     flex-flow: column nowrap;
-    flex-grow: 1;
     align-items: center;
 }

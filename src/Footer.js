@@ -13,6 +13,8 @@ export default function Footer(props) {
     const classes = useStyles(props);
 
     return(
+        <div className="Footer">
     <p className={classes.root}>created on 21th June 2020</p>
+        </div>
     );
 }

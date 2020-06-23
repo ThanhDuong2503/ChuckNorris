@@ -4,6 +4,7 @@ import Categories from "./Paths/Categories";
 import SelectedCategory from "./Paths/SelectedCategory";
 import {Switch, Route,} from "react-router-dom";
 import { makeStyles } from '@material-ui/core/styles';
+import "./Main.css";
 
 const useStyles = makeStyles({
         root: {
@@ -18,6 +19,7 @@ export default function Main(props) {
 
 return(
     <div className={classes.root}>
+            <div className="Main">
             <Switch>
                     <Route path="/" exact>
                             <h2>Welcome to Chuck Norris's best jokes</h2>
@@ -33,6 +35,7 @@ return(
                             <Categories></Categories>
                     </Route>
             </Switch>
+            </div>
         </div>
 );
 }
