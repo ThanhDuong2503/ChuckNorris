@@ -9,6 +9,7 @@ export default function SelectedCategory() {
     const params = useParams();
 
     useEffect(() => {
+        // fetch-Pfad in der URL im Browser
         fetch(`https://api.chucknorris.io/jokes/random?category=${params.category}`)
             .then (response => response.json())
             .then (data => setCategory(data))

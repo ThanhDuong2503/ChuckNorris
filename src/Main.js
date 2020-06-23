@@ -8,7 +8,7 @@ import { makeStyles } from '@material-ui/core/styles';
 const useStyles = makeStyles({
         root: {
                 background: 'linear-gradient(45deg, #1e88e5 30%, #e91e63 80%)',
-                color: props => props.color,
+                // color: props => props.color,
         },
 });
 
@@ -22,6 +22,7 @@ return(
                     <Route path="/" exact>
                             <h2>Welcome to Chuck Norris's best jokes</h2>
                     </Route>
+                    {/*Pfad in der URL im Browser Localhost:3000*/}
                     <Route path="/category/:category">
                             <SelectedCategory></SelectedCategory>
                     </Route>
