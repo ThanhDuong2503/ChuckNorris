@@ -22,7 +22,7 @@ export default function ChuckCard(props) {
             <CardActionArea>
                 <CardMedia
                     className={classes.media}
-                    image="https://aisvip-a.akamaihd.net/themenarchiv/chuck-norris-bilder/3-1e1eaqaq/460x0/2325/chuck-norris-t2914.jpg"
+                    image="http://images05.weekend.at/20120125_PD7929.HR.jpg/620x330/59.576.265"
                     title="ChuckNorris"
                 />
                 <CardContent>
