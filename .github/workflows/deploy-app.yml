@@ -22,7 +22,7 @@ jobs:
         uses: actions/upload-artifact@v2
         with:
           name: frontend-build
-          path: chucknorris/build/
+          path: build/
 
   build-backend:
     name: build jar file
