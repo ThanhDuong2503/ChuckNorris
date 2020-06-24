@@ -9,24 +9,25 @@ import Menu from '@material-ui/core/Menu';
 import MenuItem from '@material-ui/core/MenuItem';
 import {useHistory} from "react-router";
 import {Link} from "react-router-dom";
+import Grid from '@material-ui/core/Grid';
 
 const useStyles = makeStyles((theme) => ({
     root: {
         flexGrow: 0,
     },
-    menuButton: {
-        marginRight: theme.spacing(10),
-    },
-    title: {
-        flexGrow: 1,
-        marginRight: theme.spacing(18),
-
-    },
-    button: {
-        '& > *': {
-            margin: theme.spacing(1),
-        },
-    },
+    // menuButton: {
+    //     marginRight: theme.spacing(10),
+    // },
+    // title: {
+    //     flexGrow: 1,
+    //     marginRight: theme.spacing(18),
+    //
+    // },
+    // button: {
+    //     '& > *': {
+    //         margin: theme.spacing(1),
+    //     },
+    // },
     menu: {
         background: "#26a69a",
     }
@@ -56,12 +57,15 @@ export default function Header() {
 
     return(
         <div className={classes.root}>
+            <Grid container spacing={0} direction={"row"} justify={"center"} wrap={"nowrap"}>
             <AppBar color="primary" position="relative">
                 <Toolbar>
                     <IconButton edge="start" color="inherit" className={classes.menuButton} aria-label="menu">
+                        <Grid item xs={1}>
                         <Button color="secondary" aria-controls="simple-menu" aria-haspopup="true" onClick={handleClick}>
                             Menu
                         </Button>
+                        </Grid>
                             <Menu
                                 id="simple-menu"
                                 anchorEl={anchorEl}
@@ -81,16 +85,23 @@ export default function Header() {
                             </Menu>
                     </IconButton>
 
+                    <Grid item xs={2}>
                     <Button className={classes.button} variant="contained" color="secondary" onClick={goBackHandle}> go back </Button>
+                    </Grid>
 
+                    <Grid item xs={6}>
                     <Typography variant="h2" className={classes.title}>
                         Chuck Norris Jokes
                     </Typography>
+                    </Grid>
 
+                    <Grid item xs={3}>
                     <Button className={classes.button} variant="contained" color="secondary" onClick={goForwardHandle}> go forward </Button>
+                    </Grid>
 
                 </Toolbar>
             </AppBar>
+            </Grid>
         </div>
     );
 }
