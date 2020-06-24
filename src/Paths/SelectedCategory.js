@@ -13,7 +13,7 @@ export default function SelectedCategory() {
         fetch(`https://api.chucknorris.io/jokes/random?category=${params.category}`)
             .then (response => response.json())
             .then (data => setCategory(data))
-    },[] );
+    },[params.category] );
 
     return(
         <div>
