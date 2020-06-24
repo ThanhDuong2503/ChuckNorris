@@ -13,14 +13,13 @@ import Grid from '@material-ui/core/Grid';
 
 const useStyles = makeStyles((theme) => ({
     root: {
-        flexGrow: 0,
+        flexGrow: 1,
     },
     // menuButton: {
     //     marginRight: theme.spacing(10),
     // },
     // title: {
     //     flexGrow: 1,
-    //     marginRight: theme.spacing(18),
     //
     // },
     // button: {
@@ -57,7 +56,7 @@ export default function Header() {
 
     return(
         <div className={classes.root}>
-            <Grid container spacing={0} direction={"row"} justify={"center"} wrap={"nowrap"}>
+            <Grid container spacing={0} direction={"row"} wrap={"nowrap"} justify={"center"}>
             <AppBar color="primary" position="relative">
                 <Toolbar>
                     <IconButton edge="start" color="inherit" className={classes.menuButton} aria-label="menu">
@@ -95,7 +94,7 @@ export default function Header() {
                     </Typography>
                     </Grid>
 
-                    <Grid item xs={3}>
+                    <Grid item xs={2}>
                     <Button className={classes.button} variant="contained" color="secondary" onClick={goForwardHandle}> go forward </Button>
                     </Grid>
 
