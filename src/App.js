@@ -37,7 +37,7 @@ function App() {
   return (
       <ThemeProvider theme={theme}>
           <div className={classes.root}>
-              <Grid container spacing={0} direction={"column"} >
+              <Grid container spacing={0} direction={"column"}>
                 <Paper style={{height: "100vh"}}>
                     <div className="App">
                      <Switch checked={darkMode} onChange={() => setDarkMode(!darkMode)}></Switch>
