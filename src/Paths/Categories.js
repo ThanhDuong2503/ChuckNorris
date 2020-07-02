@@ -15,6 +15,7 @@ return(
     <div>
         {categories.map(category => (
             <h2 key={category.id}>
+                {/*URL im Browser bei Aufruf*/}
                 <Link to={`/category/${category}`}>{category}</Link>
             </h2>
         ))}
